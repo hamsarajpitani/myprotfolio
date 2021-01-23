@@ -1,67 +1,71 @@
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-   
+    text-decoration: none;
+    list-style: none;
 }
 
 html{
     font-size: 62.5%;
+    width: 100vw;
+    height: 100vh;
 }
 
 body{
     font-family: 'Josefin Sans', sans-serif;
 }
 
-header{
+ header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 2rem 5rem;
+    padding: 2rem 3rem;
+    margin-bottom: 4rem;
 }
 
-.logo{
-    margin-right: auto;
+
+header .logo{
     font-weight: 700;
-    padding-left: 5rem;
     font-size: 3.5rem;
     color: #ff9f43;
 }
 
-nav{
-    font-size: 1.8rem;
+
+.navbar{
+    font-size: 1.8rem; 
 }
-nav a{
+
+.navbar a{
     text-transform: capitalize;
     list-style: none;
     color: lightgray;
     text-decoration: none;
 }
 
-nav a:hover{
+
+.navbar a:hover{
     color: black;
+}
+
+
+.icon{
+    color: black;
+    display: none;
+    z-index: 20;
 }
 
 .list{
     margin: 0 3rem;
 }
 
-.welcome{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.welcome_text{
-    font-size: 4rem;
-    text-transform: capitalize;
-}
 
 .text{
+
     display: inline-block;
     margin-bottom: 2rem;
 }
+
 
 .text1,.text2,.text3{
     -webkit-text-stroke: 0px black;
@@ -75,9 +79,12 @@ nav a:hover{
 }
 
 .text1,.text3{
-    font-size: 6rem;
+    font-size: 7rem;
 }
 
+.text2{
+   font-size:3rem;
+}
 .text3{
     margin-bottom: 0;
 }
@@ -85,21 +92,86 @@ nav a:hover{
     font-weight: 200;
     font-size: 2rem;
 }
+
+.welcome_container{
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .welcome_img{
-    width:50%;
+    max-width: 55rem;
 }
 
-.welcome_img img{
-    width: 100%;
-}
 
-@media(max-width:768px){
+@media (max-width:700px){
     html{
-        font-size: 50%;
+        font-size: 55%;
+    }
+
+    header{
+        position: relative;
+        padding-top: 3rem;
     }
     
+    header .logo{
+        font-weight: 700;
+        font-size: 4rem;
+        color: #ff9f43;
+    }
+
+    .icon{
+        display: block;
+        position: absolute;
+        right: 4rem;
+        top: 21px;
+        font-size: 3rem;
+        color: orange !important;
+    }
+
+    .navbar{
+        display: none;
+    }
+
     .welcome_img{
-        width:100%;
+        max-width: 45rem;
+    }
+
+    .welcome_text_div{
+        margin-right: auto;
+    }    
+        
+}
+
+
+@media (max-width:768px){
+  
+    .navbar.responsive{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        display: block;
+        line-height: 20rem;
+        font-size: 9rem;
+        color: white;
+        padding: 8rem 2rem;
+    }
+
+    .navbar.responsive .list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+    }
+
+    .navbar.responsive .list:hover{
+        border-bottom: 5px solid white;
+        width: 10%;
     }
 
     
