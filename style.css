@@ -140,7 +140,7 @@ header .logo{
     }
 
     .welcome_img{
-        max-width: 45rem;
+        max-width: 48rem;
     }
 
     .welcome_text_div{
@@ -160,9 +160,10 @@ header .logo{
         height: 100vh;
         background-color: black;
         display: inline-block;
-        font-size: 9rem;
+        font-size: 7rem;
         color: white;
         padding: 2rem 1rem;
+        padding-top: 15rem;
     }
 
     .navbar.responsive .list{
@@ -170,6 +171,7 @@ header .logo{
         flex-direction: column;
         justify-content: center;
         color: white;
+        padding: 2rem;
     }
 
     .navbar.responsive .list:hover{
