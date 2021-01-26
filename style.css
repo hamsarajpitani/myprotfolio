@@ -4,20 +4,27 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-  
+}
+
+html, body {
+    overflow-x: hidden;
+  }
+
+ body{
+    width:100%;
 }
 
 html{
     font-size: 62.5%;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
     
 }
 
 body{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.6rem;
+    overflow-x: hidden;
 }
 
  header{
@@ -275,6 +282,7 @@ li.cpp::after{
         font-size: 4rem;
         color: #ff9f43;
         margin-left: -2rem;
+
     }
 
     .icon{
