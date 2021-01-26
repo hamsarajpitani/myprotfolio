@@ -274,6 +274,7 @@ li.cpp::after{
         font-weight: 700;
         font-size: 4rem;
         color: #ff9f43;
+        margin-left: -2rem;
     }
 
     .icon{
