@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+  
 }
 
 html{
@@ -11,18 +12,20 @@ html{
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    
 }
 
 body{
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
 }
 
  header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem;
-    margin-bottom: 4rem;
+    padding: 2rem 5rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -67,7 +70,6 @@ header .logo{
     margin-bottom: 2rem;
 }
 
-
 .text1,.text2,.text3{
     -webkit-text-stroke: 0px black;
    color: white;
@@ -96,6 +98,7 @@ header .logo{
 
 .welcome_container{
     padding: 2rem 3rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -106,13 +109,159 @@ header .logo{
     max-width: 55rem;
 }
 
+h3{
+    text-align: left;
+}
+
+.my-skills{
+
+    width: 100%;
+    margin-top: 7rem;
+    padding: 2rem 2rem;
+    background-color: white;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2.5  rem;
+    position: relative;
+}
+
+.skill-img{
+    width: 35%;
+}
+
+.skill-img img{
+    width: 100%;
+}
+.my-skills h1{
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+    font-size: 2rem;
+    position: absolute;
+    top: -2rem;
+    display: block;
+    margin: 1rem 0;
+    border-bottom: 3px lightgray solid;
+}
+.my-skills ul{
+   
+    width: 45%;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.my-skills li{
+    list-style: none;    
+    margin: 4.5rem 0 ;
+    position: relative;
+}
+
+.my-skills li::before{
+    content: "";
+    position:absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 95%;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(219, 219, 219);
+}
+
+.my-skills li::after{
+    content: "";
+    position:absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0%;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color:  rgb(51, 48, 48) ;
+    animation: .7s forwards ease-in-out ;
+}
+
+li.html::after{
+    animation-name: html;
+}
+li.css::after{
+    animation-name: css;
+}
+li.js::after{
+    animation-name: js;
+}
+li.cpp::after{
+    animation-name: cpp;
+}
+
+
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+
+
+@keyframes css{
+    to{
+        width: 80%;
+    }
+}
+
+@keyframes js{
+    to{
+        width: 60%;
+    }
+}
+
+@keyframes cpp{
+    to{
+        width: 70%;
+    }
+}
+
+
+
+@media (max-width:768px){
+  
+    
+    .navbar.responsive{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: black;
+        display: inline-block;
+        font-size: 7rem;
+        color: white;
+        padding: 2rem 1rem;
+        padding-top: 10rem;
+        
+        backface-visibility: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    .navbar.responsive .list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        margin: 2rem;
+        
+    }
+
+    .navbar.responsive .list:hover{
+        color: lightgray;
+    }
+    
+}
+
 
 @media (max-width:700px){
     html{
         font-size: 55%;
         
     }
-    
+
     body{
         position: relative;
     }
@@ -138,7 +287,6 @@ header .logo{
 
     .navbar{
         display: none;
-        
     }
 
     .welcome_img{
@@ -148,40 +296,44 @@ header .logo{
     .welcome_text_div{
         margin-right: auto;
     }    
-        
-}
+     
+    .my-skills{
 
-
-@media (max-width:768px){
-  
-    .navbar.responsive{
-        position:fixed;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        overflow-x: hidden;
-        background-color: black;
-        display: inline-block;
-        font-size: 7rem;
+        width: 100%;
+        padding: 3rem 2rem;
+        background-color: rgb(49, 49, 49);
+        height: 50rem;
         color: white;
-        padding: 2rem 1rem;
-        padding-top: 15rem;
-        transition: all 5s ease-in-out;
-    }
-
-    .navbar.responsive .list{
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
-        color: white;
-        padding: 2rem;
+        font-size: 2rem;
+    }
+    .my-skills li::after{
+        
+        background-color:  rgb(240, 148, 0) ;
+       
+    }
+    .my-skills h1{
+        text-transform: capitalize;
+        letter-spacing: .5rem;
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        display: block;
+        margin-top: 2rem;
+        border-bottom: 3px lightgray solid;
+    }
+    .skill-img{
+        display: none;
     }
 
-    .navbar.responsive .list:hover{
-        border-bottom: 5px solid white;
-        width: 10%;
-    }
-
+    .my-skills ul{
+   
+        width: 100%;
+        
+        padding: 1rem;
     
+    }
 }
