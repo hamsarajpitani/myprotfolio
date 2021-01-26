@@ -42,6 +42,9 @@ header .logo{
     color: #ff9f43;
 }
 
+.navbar-scroll-block{
+    overflow: hidden;
+}
 
 .navbar{
     font-size: 1.8rem; 
@@ -126,7 +129,7 @@ h3{
     margin-top: 7rem;
     padding: 2rem 2rem;
     background-color: white;
-    height: 50rem;
+    height: 71rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -146,7 +149,7 @@ h3{
     letter-spacing: .5rem;
     font-size: 2rem;
     position: absolute;
-    top: -2rem;
+    top: 0;
     display: block;
     margin: 1rem 0;
     border-bottom: 3px lightgray solid;
@@ -156,6 +159,7 @@ h3{
     width: 45%;
     font-size: 2rem;
     padding: 1rem;
+
 }
 .my-skills li{
     list-style: none;    
@@ -199,6 +203,13 @@ li.cpp::after{
     animation-name: cpp;
 }
 
+li.ps::after{
+    animation-name: cpp;
+}
+
+li.scss::after{
+    animation-name: cpp;
+}
 
 @keyframes html{
     to{
@@ -206,6 +217,16 @@ li.cpp::after{
     }
 }
 
+@keyframes ps{
+    to{
+        width: 75%;
+    }
+}
+@keyframes scss{
+    to{
+        width: 60%;
+    }
+}
 
 @keyframes css{
     to{
@@ -307,18 +328,9 @@ li.cpp::after{
     }    
      
     .my-skills{
-
-        width: 100vw;
-        padding: 3rem 2rem;
         background-color: rgb(49, 49, 49);
-        height: 50rem;
+        height: 75rem;
         color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        font-size: 2rem;
     }
     .my-skills li::after{
         
@@ -338,7 +350,6 @@ li.cpp::after{
     }
 
     .my-skills ul{
-   
         width: 100%;
         padding: .5rem 2rem;
     
