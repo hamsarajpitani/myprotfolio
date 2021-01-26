@@ -299,7 +299,7 @@ li.cpp::after{
      
     .my-skills{
 
-        width: 100%;
+        width: 100vw;
         padding: 3rem 2rem;
         background-color: rgb(49, 49, 49);
         height: 50rem;
@@ -308,6 +308,7 @@ li.cpp::after{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         font-size: 2rem;
     }
     .my-skills li::after{
@@ -318,11 +319,9 @@ li.cpp::after{
     .my-skills h1{
         text-transform: capitalize;
         letter-spacing: .5rem;
-        font-size: 2rem;
-        position: absolute;
-        top: 0;
+        font-size: 2.5rem;
         display: block;
-        margin-top: 2rem;
+        margin-top: 4rem;
         border-bottom: 3px lightgray solid;
     }
     .skill-img{
@@ -332,8 +331,7 @@ li.cpp::after{
     .my-skills ul{
    
         width: 100%;
-        
-        padding: 1rem;
+        padding: .5rem 2rem;
     
     }
 }
